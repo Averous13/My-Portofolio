@@ -1,9 +1,42 @@
 import React from "react";
-import { GraduationCap, Briefcase, Award } from "lucide-react";
+import { GraduationCap, Briefcase, Award, Star } from "lucide-react";
 import { Card, CardContent } from './ui/card';
 import { Badge } from "./ui/badge";
 import { about, skills } from "../data";
 
+// Mapping tingkat skill ke level numerik
+const levelMap = {
+    basic: 1,
+    intermediate: 2,
+    advance: 3,
+    expert: 4
+};
+
+// Komponen untuk menampilkan level indicator
+const SkillLevelIndicator = ({ level }) => {
+    const numLevel = typeof level === 'number' ? level : levelMap[level] || 0;
+    const levels = ['Basic', 'Intermediate', 'Advance', 'Expert'];
+    
+    return (
+        <div className="flex items-center gap-3">
+            <div className="flex gap-1.5">
+                {[1, 2, 3, 4].map((i) => (
+                    <div
+                        key={i}
+                        className={`w-3 h-6 rounded-sm transition-all duration-300 ${
+                            i <= numLevel
+                                ? 'bg-gradient-to-r from-[#3e9d81] to-[#8ab2a6]'
+                                : 'bg-gray-700'
+                        }`}
+                    ></div>
+                ))}
+            </div>
+            <span className="text-[#8ab2a6] text-sm font-medium min-w-[90px]">
+                {levels[numLevel - 1] || 'N/A'}
+            </span>
+        </div>
+    );
+};
 
 const About = () => {
     return (
@@ -56,19 +89,13 @@ const About = () => {
                     {/* Technical Skills */}
                     <div className="space-y-6">
                         <h3 className="text-2xl font-bold text-white mb-4">Technical Skills</h3>
-                        <div className="space-y-4">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {skills.technical.map((skill, index) => (
                             <div key={index} className="space-y-2">
                             <div className="flex justify-between items-center">
                                 <span className="text-gray-300 font-medium">{skill.name}</span>
-                                <span className="text-[#8ab2a6] text-sm">{skill.level}%</span>
                             </div>
-                            <div className="w-full bg-gray-800 rounded-full h-2 overflow-hidden">
-                                <div
-                                className="h-full bg-gradient-to-r from-[#3e9d81] to-[#8ab2a6] rounded-full transition-all duration-1000 ease-out"
-                                style={{ width: `${skill.level}%` }}
-                                ></div>
-                            </div>
+                            <SkillLevelIndicator level={skill.level} />
                             </div>
                         ))}
                         </div>

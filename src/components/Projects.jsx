@@ -1,9 +1,45 @@
 import React, { useState } from 'react';
-import { ExternalLink, Github, Calendar, User, TrendingUp } from 'lucide-react';
+import { ExternalLink, Github, Calendar, User, TrendingUp, Timer, Hourglass, CircleCheck, Building2 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
 import { projects, categories } from '../data';
+
+// Konfigurasi tampilan untuk setiap status proyek.
+// Menentukan label, ikon, dan warna badge yang ditampilkan pada card.
+const STATUS_CONFIG = {
+  ongoing: {
+    label: 'Ongoing',
+    icon: Hourglass,
+    textColor: 'text-blue-400',
+  },
+  pending: {
+    label: 'Pending',
+    icon: Timer,
+    textColor: 'text-yellow-400',
+  },
+  done: {
+    label: 'Done',
+    icon: CircleCheck,
+    textColor: 'text-[#8ab2a6]',
+  },
+};
+
+// Badge kecil yang menampilkan status proyek (ongoing / pending / done)
+// menggunakan komponen Badge yang sudah ada, lengkap dengan ikon dan warna sesuai STATUS_CONFIG.
+const StatusBadge = ({ status }) => {
+  const config = STATUS_CONFIG[status];
+  if (!config) return null;
+
+  const Icon = config.icon;
+
+  return (
+    <Badge className={`flex items-center gap-1.5 ${config.bgColor} border ${config.borderColor} ${config.textColor}`}>
+      <Icon size={14} className={config.textColor} />
+      <span className="text-xs font-medium">{config.label}</span>
+    </Badge>
+  );
+};
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -59,9 +95,15 @@ const Projects = () => {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#000000] via-[#000000]/50 to-transparent opacity-60"></div>
-                <Badge className="absolute top-4 right-4 bg-[#8ab2a6] text-white border-none">
+
+                {/* Kategori di kiri atas, status di kanan atas — tidak lagi bertumpuk */}
+                <Badge className="absolute top-4 left-4 bg-[#8ab2a6] text-white border-none">
                   {project.category}
                 </Badge>
+
+                <div className="absolute top-4 right-4">
+                  <StatusBadge status={project.status} />
+                </div>
               </div>
 
               <CardHeader>
@@ -81,10 +123,21 @@ const Projects = () => {
                     <Calendar size={14} />
                     <span>{project.period}</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <User size={14} />
-                    <span>{project.role}</span>
-                  </div>
+
+                  {project.company && (
+                    <div className="flex items-center gap-2">
+                      <Building2 size={14} />
+                      <span>{project.company}</span>
+                    </div>
+                  )}
+
+                  {project.role && (
+                    <div className="flex items-center gap-2">
+                      <User size={14} />
+                      <span>{project.role}</span>
+                    </div>
+                  )}
+
                   {project.impact && (
                     <div className="flex items-center gap-2">
                       <TrendingUp size={14} />

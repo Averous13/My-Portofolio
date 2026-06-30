@@ -1,11 +1,11 @@
 export const personalInfo = {
   name: "Moh Adib Syambudi",
-  title: "Junior Fullstack Developer | Organizational Strategist",
-  tagline: "Designing scalable tech and orchestrating strategic direction for sustainable growth",
+  title: "Junior Fullstack Developer | Data Enthusiast",
+  tagline: "Code with purpose, Build for Impact",
   email: "syambudiadib@gmail.com",
   phone: "+62 813-3680-3385",
   linkedin: "https://www.linkedin.com/in/moh-adib-syambudi-a32b18252/",
-  location: "Surabaya, East Java, Indonesia",
+  location: "Jakarta, Indonesia",
   photo: "https://customer-assets.emergentagent.com/job_simulation-expert/artifacts/ac7hwjo1_DSCF7377.JPG%20%281%29.jpg",
   cvUrl: "https://customer-assets.emergentagent.com/job_9502b5d0-862a-4011-959d-addc0957bb0a/artifacts/nkc2jjlo_Moh%20Adib%20Syambudi_CVATS.pdf"
 };
@@ -23,14 +23,15 @@ export const about = {
 
 export const skills = {
   technical: [
-    { name: "Laravel", level: 85 },
-    { name: "Clean Architecture", level: 80 },
-    { name: "Back-end Development", level: 85 },
-    { name: "Data Analytics", level: 75 },
-    { name: "SQL Server", level: 80 },
-    { name: "Networking", level: 75 },
-    { name: "FastAPI", level: 70 },
-    { name: "MongoDB", level: 70 }
+    { name: "Fullstack(Laravel)", level: 2 },
+    { name: "Clean Architecture", level: 1 },
+    { name: "Backend(Node.js)", level: 2 },
+    { name: "Data Analytics(Python)", level: 1 },
+    { name: "SQL Server, PostgreSQL, MYSQL", level: 2 },
+    { name: "MongoDB", level: 1 },
+    { name: "Containerization(Docker)", level : 1},
+    { name: "Version Control", level: 2},
+    { name: "Machine Learning", level: 1}
   ],
   soft: [
     "Problem Solving",
@@ -47,77 +48,123 @@ export const skills = {
 export const projects = [
   {
     id: 1,
-    title: "Exam Supervisor Administration System",
+    title: "Governance, Compliance and Risk Website",
     category: "Web Development",
-    description: "Built a comprehensive exam supervisor administration website using Laravel framework with clean architecture principles. Implemented role-based access control and real-time scheduling management.",
-    technologies: ["Laravel", "Clean Architecture", "MySQL", "Tailwind CSS"],
-    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80",
+    description: "Refactor web aspirasi daerah yang dimiliki pemerintah dengan mengukur risiko aspirasi. Dashboard monitoring berbasis geospasial dengan statistik daerah",
+    technologies: ["Laravel", "MySQL", "Javascript"],
+    image: "https://res.cloudinary.com/dgexwaht9/image/upload/v1782795925/Screenshot_2026-06-30_115952_qsjopo.png",
     github: "",
     demo: "",
-    period: "Jul 2024 - Dec 2024",
-    role: "Full Stack Developer Intern",
-    company: "DPTSI Institut Teknologi Sepuluh Nopember"
+    period: "2026",
+    role: "Fullstack Developer Intern",
+    company: "Datacomm Diangraha",
+    status: "ongoing"
   },
   {
     id: 2,
-    title: "Hospital Scheduling Simulation",
-    category: "Simulation",
-    description: "Developed a discrete event simulation model for hospital resource scheduling and optimization. Analyzed patient flow patterns and resource utilization to improve operational efficiency.",
-    technologies: ["Python", "SimPy", "Data Analytics", "Pandas"],
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80",
+    title: "SIMONEV MBG",
+    category: "Web Development",
+    description: "Monitoring dengan ekstraksi data input dan proses pengolahan makanan. Hasil output dijadikan bahan evaluasi. Dashboard terdiri dari peta supply demand bahan baku nasional, potensi risiko, dan indikator performa SPPG",
+    technologies: ["Laravel", "Geospasial", "PostgreSQL", "Javascript"],
+    image: "https://res.cloudinary.com/dgexwaht9/image/upload/v1782796431/Screenshot_2026-06-30_121254_lqhpkt.png",
     github: "",
     demo: "",
-    period: "2024",
-    role: "Developer & Researcher"
+    period: "2025",
+    role: "Fullstack Developer Intern",
+    company: "Datacomm Diangraha",
+    status: "pending"
   },
   {
     id: 3,
-    title: "UTBK Session Management System",
+    title: "Banyuwangi Destination App",
     category: "Web Development",
-    description: "Created a session management system for UTBK (university entrance exam) coordination. Features include participant registration, session allocation, and real-time monitoring dashboard.",
-    technologies: ["Laravel", "MySQL", "JavaScript", "Bootstrap"],
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
+    description: "Banyuwangi Destination App adalah proyek web dummy yang mensimulasikan platform digital pariwisata untuk Kabupaten Banyuwangi",
+    technologies: ["Node.js", "React", "MongoDB"],
+    image: "https://res.cloudinary.com/dgexwaht9/image/upload/v1782796626/Screenshot_2026-06-30_121634_krfqmm.png",
     github: "",
     demo: "",
-    period: "2024",
-    role: "Back-end Developer"
+    period: "2026",
+    role: "Fullstack developer",
+    status: "ongoing"
   },
   {
     id: 4,
-    title: "Bangkit Academy Program",
-    category: "Research",
-    description: "Participated in Google's Bangkit Academy focusing on machine learning and cloud computing. Completed capstone project involving data analysis and predictive modeling.",
-    technologies: ["Machine Learning", "Google Cloud", "Python", "TensorFlow"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+    title: "Web Pengawas UTBK",
+    category: "Web Development",
+    description: "Web dengan fitur utama berupa manajemen pengawas, ruangan, dan jadwal UTBK. Dibangun dengan arsitektur CLEAN untuk skalabilitas dan maintenance",
+    technologies: ["Laravel", "Clean Architecture", "SQL Server", "Docker"],
+    image: "https://res.cloudinary.com/dgexwaht9/image/upload/v1782797750/IMG-20240829-WA0007_ah6kw4.jpg",
     github: "",
     demo: "",
     period: "2024",
-    role: "Participant"
+    role: "Fullstack Developer Intern",
+    company: "DPTSI Institut Teknologi Sepuluh Nopember",
+    status: "done"
   },
   {
     id: 5,
-    title: "Rakerwil AMKI JATIM",
-    category: "Organization",
-    description: "Pioneered the establishment of Young AMKI regional association in East Java, coordinating participation from 40 universities. Led strategic planning and implementation of Islamic student development programs.",
-    technologies: ["Event Management", "Strategic Planning", "Leadership"],
-    image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&q=80",
+    title: "Caraka App-Bangkit Academy Project",
+    category: "Backend Development",
+    description: "Aplikasi gamifikasi edukasi aksara jawa untuk anak-anak berbasis mobile. Capstone project sebagai penilaian akhir kelulusan Bangkit Academy",
+    technologies: ["Node.js", "Google Cloud", "MongoDB"],
+    image: "https://res.cloudinary.com/dgexwaht9/image/upload/v1782798128/Screenshot_2026-06-30_122046_oywqlt.png",
     github: "",
     demo: "",
     period: "2024",
-    role: "Founder & Coordinator",
-    impact: "40+ universities, 2500+ students impacted"
+    role: "Backend developer",
+    status: "done"
   },
   {
     id: 6,
-    title: "Program Ormawa Membangun Negeri",
-    category: "Organization",
-    description: "Developed and implemented student organization programs focused on nation-building initiatives. Created character development concepts and mentoring systems for Islamic students.",
-    technologies: ["Program Management", "Mentoring", "Community Development"],
-    image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80",
+    title: "Parking system API",
+    category: "Backend Development",
+    description: "Proyek latihan pembuatan endpoint API untuk sistem parkir",
+    technologies: ["Node.js", "MySQL"],
+    image: "https://res.cloudinary.com/dgexwaht9/image/upload/v1782798048/Screenshot_2026-06-30_124021_qlngux.png",
     github: "",
     demo: "",
-    period: "2024",
-    role: "Program Leader"
+    period: "2025",
+    role: "Backend developer",
+    status: "done"
+  },
+  {
+    id: 7,
+    title: "Bank Customer Segmentation Analys",
+    category: "Machine Learning",
+    description: "Proyek latihan segmentasi customer bank berdasarkan transaksi dan akun. Metode yang digunakan clustering dengan KMeans",
+    technologies: ["Python", "Scikit-Learn"],
+    image: "https://res.cloudinary.com/dgexwaht9/image/upload/v1782798347/Screenshot_2026-06-30_124407_hupbtn.png",
+    github: "",
+    demo: "",
+    period: "2026",
+    role: "Data Analyst",
+    status: "done"
+  },
+  {
+    id: 8,
+    title: "Avian Inluenza Distribution Analys ",
+    category: "Machine Learning",
+    description: "Analisis faktor persebaran avian influenza dengan dataset kaggle irlandia. Metode yang digunakan membandingkan beberapa algoritma",
+    technologies: ["Python", "Scikit-Learn"],
+    image: "https://res.cloudinary.com/dgexwaht9/image/upload/v1782798333/Screenshot_2026-06-30_124320_diy1c2.png",
+    github: "",
+    demo: "",
+    period: "2025",
+    role: "Data Analyst",
+    status: "done"
+  },
+  {
+    id: 9,
+    title: "California Home Price Prediction ",
+    category: "Machine Learning",
+    description: "Proyek latihan prediksi harga rumah dengan dataset california housing. Prediksi dilakukan dengan model RandomForest & XGBoost",
+    technologies: ["Python", "Scikit-Learn"],
+    image: "https://res.cloudinary.com/dgexwaht9/image/upload/v1782798360/Screenshot_2026-06-30_124459_y8nttn.png",
+    github: "",
+    demo: "",
+    period: "2026",
+    role: "Machine Learning Engineer",
+    status: "done"
   }
 ];
 
@@ -166,7 +213,5 @@ export const experience = [
 export const categories = [
   "All",
   "Web Development",
-  "Simulation",
-  "Research",
-  "Organization"
+  "Machine Learning"
 ];
